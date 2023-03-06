@@ -27,11 +27,12 @@ arr[i] < arr[j] for 1 <= i < j <= arr.length
 
 This is a relatively easy problem. Here's one possible approach to solving this problem:
 
-Initialize a variable count to 0 and a variable i to 0.
-While count < k, check if i is in the array arr.
-If i is not in arr, increment count.
-If count == k, return i.
-Otherwise, increment i and repeat from step 2.
+1. Initialize a variable count to 0 and a variable i to 0.
+2. While count < k, check if i is in the array arr.
+3. If i is not in arr, increment count.
+4. If count == k, return i.
+5. Otherwise, increment i and repeat from step 2.
+
 This approach works by checking each integer starting from 1 to see if it is in the array arr, and counting the number of missing positive integers encountered so far. Once the kth missing positive integer is found, the algorithm returns it.
 
 This approach has a time complexity of O(n) in the worst case, where n is the length of the input array arr, since we may need to check every integer up to the kth missing positive integer. However, since the array is sorted in non-decreasing order, we can potentially optimize this algorithm by using binary search to find the kth missing positive integer in O(log n) time.
