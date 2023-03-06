@@ -36,3 +36,5 @@ This is a relatively easy problem. Here's one possible approach to solving this 
 This approach works by checking each integer starting from 1 to see if it is in the array arr, and counting the number of missing positive integers encountered so far. Once the kth missing positive integer is found, the algorithm returns it.
 
 This approach has a time complexity of O(n) in the worst case, where n is the length of the input array arr, since we may need to check every integer up to the kth missing positive integer. However, since the array is sorted in non-decreasing order, we can potentially optimize this algorithm by using binary search to find the kth missing positive integer in O(log n) time.
+
+Note that we use a 0-based index to access elements in the array, so we check if i > n to handle the case where we have exhausted all elements in the array. Also, we check if i != arr[i-1] to see if the current integer i is missing from the array. We return -1 if we cannot find the kth missing positive integer in the array.
